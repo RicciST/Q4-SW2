@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Time Converter</title>
+	<style>
+		body {
+			background-image: url(https://i.ytimg.com/vi/wrn-pXin70w/maxresdefault.jpg);
+			background-size: 100%;
+		}
+	</style>
+</head>
+<body>
+	<center><br><img src="https://www.pngkit.com/png/full/813-8134263_purple-clock-icon-reduce-time-icon.png
+	" width="70">
+	<br><br><h3>Time Converter</h3>
+	<h4>Convert seconds into minutes, hours, or days.</h4><br>
+		<i>Seconds to Minutes:</i><br>
+		<input type="number" oninput="forMinutes (this.value)" onchange="forMinutes (this.value)" placeholder="Enter Seconds"><br><br>
+		<span id="Minutes"></span><span> Minute/s</span><br><br><br>
+		<i>Seconds to Hours:</i><br>
+		<input type="number" oninput="forHours (this.value)" onchange="forHours (this.value)" placeholder="Enter Seconds"><br><br>
+		<span id="Hours"></span><span> Hour/s</span><br><br><br>
+		<i>Seconds to Days:</i><br>
+		<input type="number" oninput="forDays (this.value)" onchange="forDays (this.value)" placeholder="Enter Seconds"><br><br>
+		<span id="Days"></span><span> Day/s</span>
+		<script>
+			function myFunction() {
+			var num1 = document.getElementById('seconds').value;
+			}
+			function forMinutes(getValue) {
+			document.getElementById('Minutes').innerHTML=getValue/60;
+			}
+			function forHours(getValue) {
+			document.getElementById('Hours').innerHTML=getValue/3600;
+			}
+			function forDays(getValue) {
+			document.getElementById('Days').innerHTML=getValue/86400;
+			}
+		</script>
+	</center>
+</body>
+</html>
